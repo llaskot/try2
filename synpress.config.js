@@ -3,6 +3,7 @@ const synpressPlugins = require('@synthetixio/synpress/plugins');
 
 
 module.exports =  defineConfig({
+  reporter: 'cypress-mochawesome-reporter',
   e2e: {
     baseUrl: 'https://redduck-flow-poc.netlify.app/',
     specPattern: 'tests/e2e/specs',
@@ -15,6 +16,7 @@ module.exports =  defineConfig({
     screenshotOnRunFailure: false,
     setupNodeEvents(on, config) {
       synpressPlugins(on, config);
+      require('cypress-mochawesome-reporter/plugin')(on);
       return config
     },
     retries: { "runMode": 1, "openMode": 1},

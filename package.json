@@ -1,6 +1,7 @@
 {
   "devDependencies": {
-    "cypress": "^13.6.3"
+    "cypress": "^13.6.3",
+    "cypress-mochawesome-reporter": "^3.8.0"
   },
   "dependencies": {
     "@synthetixio/synpress": "^3.7.2-beta.9"

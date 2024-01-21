@@ -9,7 +9,7 @@ describe('Redduck critical path tests', () => {
     cy.clearCookies()
     cy.clearLocalStorage()
   })
- 
+      
   afterEach(() => {
     cy.switchToMetamaskWindow()
     cy.changeMetamaskNetwork('mainnet')
