@@ -9,7 +9,7 @@ describe('Redduck critical path tests', () => {
     cy.clearCookies()
     cy.clearLocalStorage()
   })
-      
+
   afterEach(() => {
     cy.switchToMetamaskWindow()
     cy.changeMetamaskNetwork('mainnet')
@@ -27,7 +27,7 @@ describe('Redduck critical path tests', () => {
     homePage.checkHeaderButtonSouldHaveText('Wrong Network')
       .checkCreatingFlowsAvailability()
       .headerBtnClick()
-      .checkPopupContainsNetwork('Ethe2reum')
+      .checkPopupContainsNetwork('Ethereum')
       .popupNetworkClick('Ethereum')
     cy.allowMetamaskToSwitchNetwork().should('be.true')
     homePage.checkHeaderButtonSouldHaveText('0x685c...04AE')
@@ -47,6 +47,4 @@ describe('Redduck critical path tests', () => {
     cy.allowMetamaskToSwitchNetwork().should('be.true')
     homePage.checkHeaderButtonSouldHaveText('0x685c...04AE')
   })
-
-
 })
