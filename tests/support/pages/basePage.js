@@ -1,5 +1,6 @@
 export class BasePage {
 
+    cy.get('w3m-modal').shadow().find('w3m-router').shadow().find('w3m-networks-view').shadow().find('wui-card-select').shadow()
 
     checkHeaderButtonSouldHaveText = (text) => {
         cy.get('header').find('[class="hidden items-center gap-2 lg:flex"]')
@@ -24,6 +25,8 @@ export class BasePage {
         cy.get('w3m-modal').shadow().find('w3m-router').shadow().find('w3m-networks-view').shadow().find('wui-card-select').shadow().contains(text).click();
         return this
     }
+
+
 
 
 }
