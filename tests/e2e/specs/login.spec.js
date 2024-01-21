@@ -27,7 +27,7 @@ describe('Redduck critical path tests', () => {
     homePage.checkHeaderButtonSouldHaveText('Wrong Network')
       .checkCreatingFlowsAvailability()
       .headerBtnClick()
-      .checkPopupContainsNetwork('Ethereum')
+      .checkPopupContainsNetwork('Ethe2reum')
       .popupNetworkClick('Ethereum')
     cy.allowMetamaskToSwitchNetwork().should('be.true')
     homePage.checkHeaderButtonSouldHaveText('0x685c...04AE')
