@@ -1,14 +1,23 @@
 {
+  "name": "reduck.synpress",
+  "version": "1.0.0",
+  "description": "test task",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/llaskot/try2.git"
+  },
+  "author": "Konstantin Lazebnyi",
   "devDependencies": {
     "cypress": "^13.6.3",
+    "@synthetixio/synpress": "^3.7.2-beta.9",
     "mochawesome": "^7.1.3",
     "mochawesome-merge": "^4.3.0",
     "mochawesome-report-generator": "^6.2.0"
   },
-  "dependencies": {
-    "@synthetixio/synpress": "^3.7.2-beta.9"
-  },
   "scripts": {
-    "test": "synpress run --configFile synpress.config.js"
+    "test": "synpress run --configFile synpress.config.js",
+    "report": "start report/results/mochawesome.html",
+    "testAndReport": "synpress run --configFile synpress.config.js && start ./report/results/mochawesome.html"
   }
 }
