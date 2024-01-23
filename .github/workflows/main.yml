@@ -1,0 +1,35 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 'latest'
+
+    - name: Install Dependencies
+      run: npm ci
+
+    - name: Install Chrome
+      run: |
+        choco install googlechrome --yes --force --ignore-checksums
+
+    - name: Run Tests
+      run: npm run test
+
+    - name: Archive Artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: test-results
+        path: try2/report/results
