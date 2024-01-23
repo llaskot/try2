@@ -32,4 +32,4 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: test-results
-        path: try2/report/results
+        path: report/results
