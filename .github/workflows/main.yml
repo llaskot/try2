@@ -6,9 +6,11 @@ on:
   #     - main
 
 
-  issues:
-    types:
-      - opened
+  workflow_dispatch:
+    inputs:
+      example_input:
+        description: 'Example input'
+        required: false
 
 jobs:
   test:
