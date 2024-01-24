@@ -38,5 +38,5 @@ jobs:
     - name: Archive Artifacts
       uses: actions/upload-artifact@v3
       with:
-        name: test-results
+        name: "test-results-${{ github.run_id }}"
         path: report/results
