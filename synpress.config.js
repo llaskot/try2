@@ -19,13 +19,13 @@ module.exports = defineConfig({
     viewportHeight: 850,
     videosFolder: 'report/results/assets/videos',
     screenshotsFolder: 'report/results/assets',
-    video: true,
+    video: false,
     screenshotOnRunFailure: true,
     setupNodeEvents(on, config) {
       synpressPlugins(on, config);
       return config
     },
-    retries: { "runMode": 1, "openMode": 1 },
+    retries: { "runMode": 2, "openMode": 1 },
     defaultCommandTimeout: 5000,
     pageLoadTimeout: 5000,
     requestTimeout: 5000,
