@@ -18,6 +18,8 @@
   "scripts": {
     "test": "synpress run --configFile synpress.config.js",
     "report": "start report/results/mochawesome.html",
-    "testAndReport": "synpress run --configFile synpress.config.js && start ./report/results/mochawesome.html"
+    "testAndReport": "synpress run --configFile synpress.config.js && start ./report/results/mochawesome.html",
+    "test-reported": "rd /s /q mochawesome-report results & del mochawesome.json & synpress run --configFile synpress.config.js & npx mochawesome-merge results/*.json -o mochawesome.json && npx marge mochawesome.json -f \"[status]_[datetime]-[name]-repot\" --ts longDate"
+
   }
 }
