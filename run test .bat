@@ -1,3 +1,3 @@
-call npm run test
+call npm run test-reported
 pause
 exit 

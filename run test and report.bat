@@ -1,4 +1,3 @@
-call npm run test
-call npm run report
+call npm run testAndReport
 pause
 exit 

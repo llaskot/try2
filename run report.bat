@@ -1,2 +1,2 @@
-call
-npm run report
+call npm run report
+ 
