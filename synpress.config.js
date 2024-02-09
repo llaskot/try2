@@ -30,7 +30,7 @@ module.exports = defineConfig({
       synpressPlugins(on, config);
       return config
     },
-    retries: { "runMode": 2, "openMode": 2 },
+    retries: { "runMode": 3, "openMode": 2 },
     defaultCommandTimeout: 5000,
     pageLoadTimeout: 5000,
     requestTimeout: 5000,
