@@ -65,7 +65,7 @@ Cypress.on("test:after:run", (test, runnable) => {
     content.forEach((record) => {
 
       addContext({ test }, {
-        title: `Retry # ${record.retry}`, value:
+        title: `Retry # ${record.retry} from ${test.retrys}`, value:
           `________________________________________________________________________________________________________________\nState: ${record.state}`
       });
 
