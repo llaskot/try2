@@ -33,7 +33,7 @@ jobs:
         choco install googlechrome --yes --force --ignore-checksums
 
     - name: Run Tests
-      run: npm run test
+      run: npm run test-reported
 
     - name: Archive Artifacts
       uses: actions/upload-artifact@v3
