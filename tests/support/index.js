@@ -111,13 +111,10 @@ Cypress.on("test:after:run", (test, runnable) => {
         }
       }
 
-      // console.log("RECORD ", record)
 
 
     })
-    // console.log('Cypress.config() ', Cypress.config() )
-    // console.log("TEST TEST ", test)
-    // console.log("RUNABLE ", runnable)
+
 
     content = []
     if (cypressConfig.video) {addContext({ test }, `assets/videos/${Cypress.spec.name}.mp4`);
