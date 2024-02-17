@@ -33,4 +33,4 @@ In order to use these tests get try2 directory by any console app (cmd bash etc.
  
  If you need to change it or add something to the report or a specific way to start tests - message/call me!
  
- HTML and JSON reports are located in the try2\report\results directory.
+ HTML and JSON reports are located in the try2\report\results directory. 
